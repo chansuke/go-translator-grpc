@@ -1,5 +1,5 @@
-# go-translator-grpc
-> translator with grpc
+## go-translator-grpc
+> translator with grpc server
 
 ## Demo
 
