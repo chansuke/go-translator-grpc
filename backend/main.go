@@ -6,7 +6,8 @@ import (
 	"net"
 
 	"github.com/Sirupsen/logrus"
-	ps "github.com/chansuke/go-translator-grpc/api"
+	pb "github.com/chansuke/go-translator-grpc/api"
+
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )
@@ -22,7 +23,7 @@ func main() {
 
 	s := grpc.NewServer()
 	pb.RegisterTextToTranslationServer(s, server{})
-	err := s.Serve(lis)
+	err = s.Serve(lis)
 	if err != nil {
 		logrus.Fatalf("cound not serve: %v", err)
 	}
