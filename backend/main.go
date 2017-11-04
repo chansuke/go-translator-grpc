@@ -7,6 +7,7 @@ import (
 
 	"github.com/Sirupsen/logrus"
 	pb "github.com/chansuke/go-translator-grpc/api"
+
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )
