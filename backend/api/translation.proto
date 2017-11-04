@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package translation;
+
+service TextToTranslation {
+  rpc Say(Text) returns(Translation) {}
+}
+
+message Text {
+  string text = 1;
+}
+
+message Translation {
+  bytes Audio = 1;
+}
+
